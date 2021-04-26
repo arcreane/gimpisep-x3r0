@@ -1,0 +1,6 @@
+{
+    "C_Cpp.default.includePath": [
+        "C:\\opencv\\build\\include",
+        "includes"
+    ]
+}
