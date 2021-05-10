@@ -198,6 +198,18 @@ void modifyImage()
   {
     erode(frame, frame, erosionSize.listenedVariable);
   }
+  if (isBrightnessActive.listenedVariable)
+  {
+    brightness(frame, frame, brightnessFactor.listenedVariable);
+  }
+  if (isResizeFactorActive.listenedVariable)
+  {
+    resize(frame, frame, scaleFactor.listenedVariable);
+  }
+  if (isResizeAbsoluteActive.listenedVariable)
+  {
+    resize(frame, frame, cv::Size(newWidth.listenedVariable, newHeight.listenedVariable));
+  }
 
   cv::imshow(PREVIEW_WINDOW_NAME, frame);
 }
