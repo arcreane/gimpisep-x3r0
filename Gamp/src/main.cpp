@@ -190,7 +190,14 @@ void modifyImage()
 {
   originalImage.copyTo(frame);
 
-  // TODO: Add functionnalities here
+  if (isDilatationActive.listenedVariable)
+  {
+    dilate(frame, frame, dilatationSize.listenedVariable);
+  }
+  if (isErosionActive.listenedVariable)
+  {
+    erode(frame, frame, erosionSize.listenedVariable);
+  }
 
   cv::imshow(PREVIEW_WINDOW_NAME, frame);
 }
