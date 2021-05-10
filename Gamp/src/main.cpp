@@ -136,7 +136,13 @@ int main(void)
           }
         }
 
-        // TODO: Panorama
+        bool res = panorama(images, originalImage);
+
+        if (res)
+        {
+          newWidth.listenedVariable = originalImage.size().width;
+          newHeight.listenedVariable = originalImage.size().height;
+        }
       }
     }
     cvui::endRow();

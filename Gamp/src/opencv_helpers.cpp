@@ -34,3 +34,16 @@ void brightness(cv::Mat src, cv::Mat &dst, double beta)
 {
   src.convertTo(dst, -1, 1, beta);
 }
+
+bool panorama(std::vector<cv::Mat> images, cv::Mat &dst)
+{
+  cv::Mat panoramaImage;
+  cv::Stitcher::Mode mode = cv::Stitcher::PANORAMA;
+  cv::Ptr<cv::Stitcher> stitcher = cv::Stitcher::create(mode);
+  cv::Stitcher::Status status = stitcher->stitch(images, panoramaImage);
+  if (status == cv::Stitcher::OK) {
+      dst = panoramaImage;
+      return true;
+  }
+  return false;
+}

@@ -8,3 +8,4 @@ void erode(cv::Mat src, cv::Mat &dst, int erosionSize);
 void resize(cv::Mat src, cv::Mat &dst, double scaleFactor);
 void resize(cv::Mat src, cv::Mat &dst, cv::Size size);
 void brightness(cv::Mat src, cv::Mat &dst, double beta);
+bool panorama(std::vector<cv::Mat> images, cv::Mat &dst);
