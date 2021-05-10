@@ -136,7 +136,13 @@ int main(void)
           }
         }
 
-        // TODO: Panorama
+        bool res = panorama(images, originalImage);
+
+        if (res)
+        {
+          newWidth.listenedVariable = originalImage.size().width;
+          newHeight.listenedVariable = originalImage.size().height;
+        }
       }
     }
     cvui::endRow();
@@ -209,6 +215,18 @@ void modifyImage()
   if (isResizeAbsoluteActive.listenedVariable)
   {
     resize(frame, frame, cv::Size(newWidth.listenedVariable, newHeight.listenedVariable));
+  }
+  if (isCannyActive.listenedVariable)
+  {
+    cannyEdges(frame, frame, cannyThreshold.listenedVariable, 3);
+  }
+  if (isRotateActive.listenedVariable)
+  {
+    rotate(frame, frame, rotationAngle.listenedVariable);
+  }
+  if (isFaceRecognition.listenedVariable)
+  {
+    faceRecognition(frame, frame);
   }
 
   cv::imshow(PREVIEW_WINDOW_NAME, frame);
