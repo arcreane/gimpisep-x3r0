@@ -32,13 +32,22 @@ Gamp is a school project in the "Multimedia Application" module where the goal i
 
 The objective of this project is to learn how to use the OpenCV library through the example of a concrete case. For this project, we have been asked to implement the different functionalities below:
 
-* [ ] Dilatation / Erosion
-* [ ] Resizing
-* [ ] Lighten / Darken
-* [ ] Panorama / Stitching
-* [ ] Canny edge detection
+* [x] Dilatation / Erosion
+* [x] Resizing
+* [x] Lighten / Darken
+* [x] Panorama / Stitching
+* [x] Canny edge detection
+* [x] Image rotation
+* [x] Face recognition
+
+<h1 align="center">
+  <br>
+  <img src="./docs/gamp_preview.png" alt="Gamp Project" height="600">
+</h1>
 
 ## How to build
+
+### On Linux
 
 To compile and use Gamp, you must first install OpenCV and all necessary dependencies. For this purpose an `install_opencv.sh` file is available and its role is to install everything properly.
 
@@ -74,14 +83,22 @@ $ cd build/
 $ ./gamp
 ```
 
+### On Windows
+
+You must first install OpenCV, we recommend to have at least version 4.5.X. You can download it [on this link](https://opencv.org/releases/), make sure to install it preferably in `C:\opencv`, or don't forget to modify the project configurations to point in the right path.
+
+You will also need [Visual Studio](https://visualstudio.microsoft.com/fr/), version 2019 or higher is recommended. Then you just have to open the solution contained in the `Gamp/` folder and you can compile.
+
+**Note**: Make sure you compile for an x64 architecture and in release mode!
+
 ## Authors
 
-| Name              | Github                                      |
-|-------------------|---------------------------------------------|
-| Yohann MARTIN     | [Astropilot](https://github.com/Astropilot) |
-| Mathias GEROUDET  | [Sazere](https://github.com/Sazere)         |
-| Timothee PIONNIER |                                             |
-| Oscar Mc Auliffe  |                                             |
+| Name              | Github                                              |
+|-------------------|-----------------------------------------------------|
+| Yohann MARTIN     | [Astropilot](https://github.com/Astropilot)         |
+| Mathias GEROUDET  | [Sazere](https://github.com/Sazere)                 |
+| Timothee PIONNIER | [TimPionnier](https://github.com/TimPionnier)       |
+| Oscar Mc Auliffe  | [oscarmcauliffe](https://github.com/oscarmcauliffe) |
 
 ## License
 
